@@ -1,0 +1,51 @@
+
+ajavascript:S3785"BTypeError can be thrown as this operand might have primitive type.(ĞÔÿÿÿÿÿ
+\javascript:S2259"BTypeError can be thrown as "opts" might be null or undefined here.(Ñš‹ä
+ajavascript:S2259"BTypeError can be thrown as "opts" might be null or undefined here.(ïá¾™úÿÿÿÿ
+cjavascript:S2259"DTypeError can be thrown as "object" might be null or undefined here.(‰²¾õÿÿÿÿÿ
+]javascript:S2259"CTypeError can be thrown as "thing" might be null or undefined here.(›Ó‘
+Yjavascript:S2259"?TypeError can be thrown as "a" might be null or undefined here.(ÊÓúâ
+^javascript:S2259"?TypeError can be thrown as "b" might be null or undefined here.(óüÕ¢ûÿÿÿÿ
+Œjavascript:S2583"mChange this condition so that it does not always evaluate to "false"; some subsequent code is never executed.(™¿ùûÿÿÿÿ
+‡javascript:S2583"mChange this condition so that it does not always evaluate to "false"; some subsequent code is never executed.(˜Ê°
+ljavascript:S2589"MRefactor this code so that this expression does not always evaluate to false.(ôäğøÿÿÿÿ
+?javascript:S1442" Remove this usage of alert(...).(ôÂ•ãúÿÿÿÿ
+?javascript:S1442" Remove this usage of alert(...).(ôÂ•ãúÿÿÿÿ
+?javascript:S1442" Remove this usage of alert(...).(ôÂ•ãúÿÿÿÿ
+:javascript:S1442" Remove this usage of alert(...).(Øïòı
+:javascript:S1442" Remove this usage of alert(...).(Øïòı
+cjavascript:S2814"IRename "change" as this name is already used in declaration at line 2332.(ÑÑìÅ
+djavascript:S2814"ERename "res" as this name is already used in declaration at line 646.(É®İ¥ùÿÿÿÿ
+bjavascript:S2814"CRename "i" as this name is already used in declaration at line 641.(è¹õÎùÿÿÿÿ
+cjavascript:S2814"IRename "change" as this name is already used in declaration at line 2039.(ÑÑìÅ
+ejavascript:S2814"FRename "dep" as this name is already used in declaration at line 1068.(÷®³Çıÿÿÿÿ
+ejavascript:S2814"FRename "dep" as this name is already used in declaration at line 1068.(í…ğĞúÿÿÿÿ
+bjavascript:S2814"CRename "l" as this name is already used in declaration at line 641.(è¹õÎùÿÿÿÿ
+;javascript:S1116"Remove this empty statement.(Åñ­õşÿÿÿÿ
+;javascript:S1116"Remove this empty statement.(Åñ­õşÿÿÿÿ
+Ijavascript:S1472"*Make those call arguments start on line 68(À˜½¤øÿÿÿÿ
+;javascript:S878""Remove use of this comma operator.(‡°¸
+@javascript:S878""Remove use of this comma operator.(ÀìÂúÿÿÿÿ
+@javascript:S878""Remove use of this comma operator.(—š™œøÿÿÿÿ
+;javascript:S878""Remove use of this comma operator.(”œ½Á
+@javascript:S878""Remove use of this comma operator.(›–ı‰ùÿÿÿÿ
+Ijavascript:UnusedVariable"&Remove unused function 'invariantLOS'.(û•¾¾
+Yjavascript:UnusedVariable"6Remove the declaration of the unused 'heart' variable.(’ëû€
+djavascript:UnusedVariable"<Remove the declaration of the unused 'LS_USER_KEY' variable.(ĞÙõÏúÿÿÿÿ
+^javascript:UnusedVariable"6Remove the declaration of the unused 'close' variable.(Ó´É¡ûÿÿÿÿ
+Tjavascript:UnusedVariable",Remove unused function 'invariantObservers'.(äë„™ûÿÿÿÿ
+_javascript:UnusedVariable"7Remove the declaration of the unused 'github' variable.(ı€ıÇıÿÿÿÿ
+njavascript:UnusedVariable"FRemove the declaration of the unused 'NOT_INITIALIZED_ERROR' variable.(Œ®ÙÕıÿÿÿÿ
+fjavascript:UnusedVariable"DRemove the declaration of the unused 'LS_ACCESS_TOKEN_KEY' variable.(ØÓµs
+[javascript:UnusedVariable"8Remove the declaration of the unused 'spinner' variable.(³ä ¢
+Xjavascript:UnusedVariable"5Remove the declaration of the unused 'http' variable.(¨Š©
+]javascript:S1854">Remove this useless assignment to local variable "LS_USER_KEY"(ĞÙõÏúÿÿÿÿ
+_javascript:S1854"FRemove this useless assignment to local variable "LS_ACCESS_TOKEN_KEY"(ØÓµs
+gjavascript:S1854"HRemove this useless assignment to local variable "NOT_INITIALIZED_ERROR"(Œ®ÙÕıÿÿÿÿ
+Qjavascript:S1854"7Remove this useless assignment to local variable "http"(¨Š©
+Tjavascript:S1854":Remove this useless assignment to local variable "spinner"(³ä ¢
+Wjavascript:S1854"8Remove this useless assignment to local variable "close"(Ó´É¡ûÿÿÿÿ
+Rjavascript:S1854"8Remove this useless assignment to local variable "heart"(’ëû€
+Xjavascript:S1854"9Remove this useless assignment to local variable "github"(ı€ıÇıÿÿÿÿ
+Wjavascript:S1143"8Remove this "throw" statement from this "finally" block.(ŞÑÊ úÿÿÿÿ
+Wjavascript:S1143"8Remove this "throw" statement from this "finally" block.(ŞÑÊ úÿÿÿÿ

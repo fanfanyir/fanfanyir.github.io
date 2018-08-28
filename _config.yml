@@ -4,17 +4,17 @@
 
 # Site
 title: fanfan's blog
-subtitle:
-description:
-keywords:
+subtitle: subtitle
+description: 44
+keywords: keywords
 author: 张伊凡
 language: zh-CN
 timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
-root: /
+url: http://yoursite.com/Sunshine
+root: /Sunshine/
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 
@@ -41,7 +41,7 @@ future: true
 highlight:
   enable: true
   line_number: true
-  auto_detect: false
+  auto_detect: true
   tab_replace:
   
 # Home page setting
@@ -78,4 +78,7 @@ theme: maupassant
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type:
+  type: git
+  repo: git@github.com:fanfanyir/fanfanyir.github.io.git
+  branch: master
+
