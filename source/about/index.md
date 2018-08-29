@@ -1,5 +1,5 @@
 ---
-title: ' js加载机制 '
+title: ' about '
 date: 2018-08-21 17:06:24
 tags:
 categories:
@@ -7,8 +7,9 @@ categories:
 
 ----
 
+
+>hexo g ceshi
 >
 >
->js加载机制
 >
 >
