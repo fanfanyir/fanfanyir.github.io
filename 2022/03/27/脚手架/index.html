@@ -18,13 +18,15 @@
   
   
   <title>脚手架 | fanfanyir</title>
-  <meta property="og:type" content="article">
+  <meta name="description" content="一、认识脚手架1. 为什么要开发脚手架前端开发现状  创建项目 &amp; 通用代码：埋点、HTTP 请求、工具方法、组件库 git 操作：创建仓库、代码冲突、远程代码同步、创建版本、发布打 tag 发布上线：依赖安装和构建、资源上传CDN、域名绑定、测试&#x2F;正式服务器  核心价值：  自动化：项目重复代码拷贝&#x2F;git操作&#x2F;发布上线操作 标准化：项目创建&#x2F;gi">
+<meta property="og:type" content="article">
 <meta property="og:title" content="脚手架">
 <meta property="og:url" content="https://fanfanyir.github.io/2022/03/27/%E8%84%9A%E6%89%8B%E6%9E%B6/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="一、认识脚手架1. 为什么要开发脚手架前端开发现状  创建项目 &amp; 通用代码：埋点、HTTP 请求、工具方法、组件库 git 操作：创建仓库、代码冲突、远程代码同步、创建版本、发布打 tag 发布上线：依赖安装和构建、资源上传CDN、域名绑定、测试&#x2F;正式服务器  核心价值：  自动化：项目重复代码拷贝&#x2F;git操作&#x2F;发布上线操作 标准化：项目创建&#x2F;gi">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-03-27T09:10:41.000Z">
-<meta property="article:modified_time" content="2022-03-27T09:20:19.777Z">
+<meta property="article:modified_time" content="2022-03-27T10:41:26.944Z">
 <meta property="article:author" content="ZhangYifan">
 <meta name="twitter:card" content="summary">
   <!-- Canonical links -->
@@ -216,7 +218,7 @@
   <div class="widget">
     <h3 class="widget-title">Archive</h3>
     <div class="widget-body">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/03/">March 2022</a><span class="archive-list-count">3</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/03/">March 2022</a><span class="archive-list-count">2</span></li></ul>
     </div>
   </div>
 
@@ -254,21 +256,6 @@
               </p>
               <p class="item-date">
                 <time datetime="2022-03-27T09:10:41.000Z" itemprop="datePublished">2022-03-27</time>
-              </p>
-            </div>
-          </li>
-          
-          <li>
-            
-            <div class="item-inner">
-              <p class="item-category">
-                
-              </p>
-              <p class="item-title">
-                <a href="/2022/03/27/test-my-site/" class="title">test_my_site</a>
-              </p>
-              <p class="item-date">
-                <time datetime="2022-03-27T07:37:53.000Z" itemprop="datePublished">2022-03-27</time>
               </p>
             </div>
           </li>
@@ -323,7 +310,209 @@
     </div>
     <div class="article-entry marked-body" itemprop="articleBody">
       
-        
+        <h2 id="一、认识脚手架"><a href="#一、认识脚手架" class="headerlink" title="一、认识脚手架"></a>一、认识脚手架</h2><h3 id="1-为什么要开发脚手架"><a href="#1-为什么要开发脚手架" class="headerlink" title="1. 为什么要开发脚手架"></a>1. 为什么要开发脚手架</h3><p><strong>前端开发现状</strong></p>
+<ol>
+<li>创建项目 &amp; 通用代码：埋点、HTTP 请求、工具方法、组件库</li>
+<li>git 操作：创建仓库、代码冲突、远程代码同步、创建版本、发布打 tag</li>
+<li>发布上线：依赖安装和构建、资源上传CDN、域名绑定、测试&#x2F;正式服务器</li>
+</ol>
+<p><strong>核心价值：</strong></p>
+<ul>
+<li>自动化：项目重复代码拷贝&#x2F;git操作&#x2F;发布上线操作</li>
+<li>标准化：项目创建&#x2F;git flow&#x2F;发布流程&#x2F;回滚流程</li>
+<li>数据化：研发过程系统化、数据化、使得研发过程可量化</li>
+</ul>
+<p><strong>jenkins、travis等自动化构建工具已经比较成熟了，为什么还需要自研脚手架？</strong></p>
+<ol>
+<li>不满足需求：<br> 通常在 git hooks 中触发，需要在服务端执行，无法覆盖研发人员本地的功能，比如：创建项目自动化、本地 git 操作自动化等</li>
+<li>定制复杂：<br> 定制过程需要开发插件，过程较为复杂；需要使用java语言，对前端同学不够友好</li>
+</ol>
+<h3 id="2-从使用的角度理解什么是脚手架"><a href="#2-从使用的角度理解什么是脚手架" class="headerlink" title="2. 从使用的角度理解什么是脚手架"></a>2. 从使用的角度理解什么是脚手架</h3><p><strong>创建项目</strong></p>
+<ul>
+<li>标准模版创建</li>
+<li>自定义规则创建</li>
+<li>创建组件库</li>
+<li>自动安装和启动</li>
+</ul>
+<p><strong>发布项目</strong></p>
+<ul>
+<li>Git 自动化</li>
+<li>云构建</li>
+<li>项目自动发布</li>
+<li>组件自动发布</li>
+</ul>
+<h3 id="3-脚手架的执行原理-以-vue-为例"><a href="#3-脚手架的执行原理-以-vue-为例" class="headerlink" title="3. 脚手架的执行原理 - 以 vue 为例"></a>3. 脚手架的执行原理 - 以 vue 为例</h3><ul>
+<li>在终端输入 vue create vue-test-app</li>
+<li>终端解析出 vue 命令</li>
+<li>终端在环境变量中找到 vue 命令</li>
+<li>终端根据 vue 命令链接到实际文件 vue.js</li>
+<li>终端利用 node 执行 vue.js</li>
+<li>vue.js 解析 command &#x2F; options</li>
+<li>vue.js 执行 command</li>
+<li>执行完毕，退出执行</li>
+</ul>
+<h3 id="4-从应用的角度看如何开发一个脚手架（以-vue-cli-为例）："><a href="#4-从应用的角度看如何开发一个脚手架（以-vue-cli-为例）：" class="headerlink" title="4. 从应用的角度看如何开发一个脚手架（以 vue-cli 为例）："></a>4. 从应用的角度看如何开发一个脚手架（以 vue-cli 为例）：</h3><ul>
+<li>开发 npm 项目，项目中要包含一个 bin&#x2F;vue.js 文件，并将这个项目发布到 npm</li>
+<li>将 npm 项目安装到 node 的 lib&#x2F;node_modules</li>
+<li>在 node 的 bin 目录下配置 vue 软链接指向 lib&#x2F;node_modules&#x2F;@vue&#x2F;cli&#x2F;bin&#x2F;vue.js</li>
+</ul>
+<p>这样在执行 vue 命令的时候就可以找到 vue.js 并执行</p>
+<p>疑问：</p>
+<ol>
+<li>为什么全局安装 @vue&#x2F;cli 后会添加的命令为 vue ？<br>vue cli 下面的 package.jspn 里面的 bin 指定了软链接 vue: ‘bin&#x2F;vue.js’</li>
+<li>全局安装 @vue&#x2F;cli 时发生了什么？<ul>
+<li>把依赖下载到指定 node_module 目录下面</li>
+<li>配置一个 bin 的软链接</li>
+</ul>
+</li>
+<li>执行 vue 命令的时候发生了什么？为什么 vue 指向一个 js 文件，我们却可以直接通过 vue 命令直接去执行它？<ul>
+<li>在环境变量当中找 vue 命令有没有被注册</li>
+<li>js 文件需要通过一个解释器进行执行 —- node</li>
+<li>vue.js 有一行 #!&#x2F;usr&#x2F;bin&#x2F;env node  -&gt; 告诉操作系统，在直接调用这个文件的时候去环境变量中找 node 这个命令，通过 node 命令去执行</li>
+</ul>
+</li>
+</ol>
+<p>可以通过 echo $PATH 看到当前环境所有的环境变量</p>
+<h3 id="5-脚手架原理进阶"><a href="#5-脚手架原理进阶" class="headerlink" title="5. 脚手架原理进阶"></a>5. 脚手架原理进阶</h3><ul>
+<li>为什么说脚手架本质是操作系统的客户端？它和我们在PC上安装的应用&#x2F;软件有什么区别？<ul>
+<li>因为 node 本身是一个客户端，用 node 来执行，本质没有区别</li>
+</ul>
+</li>
+<li>如何为 node 脚手架命令创建别名？<ul>
+<li>在 bin 目录下创建软链接：ln -s &#x2F;Users&#x2F;fanzhang&#x2F;Desktop&#x2F;vue-test&#x2F;test.js ice</li>
+<li>可以嵌套</li>
+</ul>
+</li>
+<li>描述脚手架命令执行的全过程<ul>
+<li>输入 vue create vue-test-app</li>
+<li>在环境变量 $PATH 中查询 vue 命令 — 相当于 which vue</li>
+<li>查询实际链接文件</li>
+<li>通过 &#x2F;usr&#x2F;bin&#x2F;env node 执行文件</li>
+</ul>
+</li>
+</ul>
+<h3 id="6-脚手架开发流程和难点解析"><a href="#6-脚手架开发流程和难点解析" class="headerlink" title="6. 脚手架开发流程和难点解析"></a>6. 脚手架开发流程和难点解析</h3><p><strong>开发流程</strong></p>
+<ol>
+<li>创建 npm 项目</li>
+<li>创建脚手架入口文件，最上方添加 #!&#x2F;usr&#x2F;bin&#x2F;env node</li>
+<li>配置 package.json ，添加 bin 属性</li>
+<li>编写脚手架代码</li>
+<li>将脚手架发布到 npm</li>
+</ol>
+<p><strong>使用流程</strong></p>
+<ol>
+<li>安装脚手架：npm install -g your-own-cli</li>
+<li>使用脚手架：your-own-cli</li>
+</ol>
+<p><strong>难点解析</strong></p>
+<ul>
+<li>分包：将复杂的系统拆分成若干个模块</li>
+<li>命令注册：create  add</li>
+<li>参数解析：vue command [options] <params></li>
+<li>options 全称 和 简写</li>
+<li>带 params 的 options：–path &#x2F;users&#x2F;Desktop&#x2F;vue-test</li>
+<li>帮助文档<ul>
+<li>global help<ul>
+<li>Usage<br> Options<br> Commands</li>
+</ul>
+</li>
+<li>command help<ul>
+<li>Usage<br> options</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>其他<ul>
+<li>命令行交互</li>
+<li>日志打印</li>
+<li>网络通信：HTTP&#x2F;webSocket</li>
+<li>…<h2 id="二、开发第一个脚手架"><a href="#二、开发第一个脚手架" class="headerlink" title="二、开发第一个脚手架"></a>二、开发第一个脚手架</h2><h3 id="1-新建脚手架"><a href="#1-新建脚手架" class="headerlink" title="1. 新建脚手架"></a>1. 新建脚手架</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ mkdir ice</span><br><span class="line">$ cd ice</span><br><span class="line">$ npm init</span><br><span class="line">$ touch bin/index.js</span><br></pre></td></tr></table></figure>
+bin&#x2F;index.js<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#!/usr/bin/env node</span><br></pre></td></tr></table></figure>
+package.json 新增 bin 属性<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ice: bin/index.js</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ npm login</span><br><span class="line">$ npm publish</span><br></pre></td></tr></table></figure>
+<h3 id="2-本地安装脚手架"><a href="#2-本地安装脚手架" class="headerlink" title="2. 本地安装脚手架"></a>2. 本地安装脚手架</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g ice</span><br></pre></td></tr></table></figure>
+<h3 id="3-本地调试"><a href="#3-本地调试" class="headerlink" title="3. 本地调试"></a>3. 本地调试</h3><ul>
+<li>npm link ice — (常用)</li>
+<li>在存在 ice 的文件夹下 npm install</li>
+<li>在环境变量中创建短链： ln -s 本地链接 ice<h3 id="4-脚手架本地-link-标准流程、分包"><a href="#4-脚手架本地-link-标准流程、分包" class="headerlink" title="4. 脚手架本地 link 标准流程、分包"></a>4. 脚手架本地 link 标准流程、分包</h3>链接本地脚手架<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ cd your-link-dir</span><br><span class="line">$ npm link</span><br></pre></td></tr></table></figure>
+链接本地库文件<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$ cd your-lib-dir</span><br><span class="line">$ npm link</span><br><span class="line">$ cd your-cli-dir</span><br><span class="line">$ # link 存在</span><br><span class="line">$ npm link your-lib-dir</span><br><span class="line">$ # link 不存在</span><br><span class="line">$ rm -rf node_modules</span><br><span class="line">$ npm install</span><br></pre></td></tr></table></figure>
+取消链接本地库文件<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ cd your-lib-dir</span><br><span class="line">$ npm unlink</span><br><span class="line">$ cd your-cli-dir</span><br><span class="line">$ npm unlink your-lib-dir</span><br></pre></td></tr></table></figure></li>
+<li>理解 npm link<ul>
+<li>npm link your-lib: 将当前项目中 node_modules 下指定的库文件链接到全局 node_modules 下的库文件</li>
+<li>npm link：将当前项目链接到 node 全局 node_modules 中作为一个库文件，并解析 bin 配置创建可执行文件</li>
+</ul>
+</li>
+<li>理解 npm unlink<ul>
+<li>npm unlink：将当前项目从 node 全局 node_modules 中移除</li>
+<li>npm unlink your-lib：将当前项目中的库文件依赖移除<h3 id="5-脚手架命令注册和参数解析"><a href="#5-脚手架命令注册和参数解析" class="headerlink" title="5. 脚手架命令注册和参数解析"></a>5. 脚手架命令注册和参数解析</h3></li>
+</ul>
+</li>
+</ul>
+<h3 id="6-原生脚手架开发痛点分析"><a href="#6-原生脚手架开发痛点分析" class="headerlink" title="6. 原生脚手架开发痛点分析"></a>6. 原生脚手架开发痛点分析</h3><ol>
+<li>痛点一：重复操作</li>
+</ol>
+<ul>
+<li>多 package 本地 link</li>
+<li>多 package 依赖安装</li>
+<li>多 package 单元测试</li>
+<li>多 package 代码提交</li>
+<li>多 package 代码发布</li>
+</ul>
+<ol start="2">
+<li>痛点二：版本一致性</li>
+</ol>
+<ul>
+<li>发布后版本一致性</li>
+<li>发布后相互依赖版本升级</li>
+</ul>
+<h2 id="三、lerna"><a href="#三、lerna" class="headerlink" title="三、lerna"></a>三、lerna</h2><h3 id="1-认识-lerna"><a href="#1-认识-lerna" class="headerlink" title="1. 认识 lerna"></a>1. 认识 lerna</h3><p>lerna 是一个优化基于 git+npm 的多 package 项目的管理工具</p>
+<p><strong>优势：</strong></p>
+<ul>
+<li>大幅减少重复操作</li>
+<li>提升操作的标准化</li>
+</ul>
+<blockquote>
+<p>lerna 是架构优化的产物，它揭示了一个架构真理：项目复杂度提升后，就需要对项目进行架构优化。<br>架构优化的主要目标往往都是以效能为核心的。</p>
+</blockquote>
+<p><strong>使用 Lerna 管理的大型项目：</strong></p>
+<ul>
+<li>babel</li>
+<li>vue-cli</li>
+<li>create-react-app</li>
+</ul>
+<h3 id="2-基于lerna搭建脚手架框架"><a href="#2-基于lerna搭建脚手架框架" class="headerlink" title="2. 基于lerna搭建脚手架框架"></a>2. 基于lerna搭建脚手架框架</h3><p><strong>lerna 开发脚手架流程</strong></p>
+<ol>
+<li>脚手架项目初始化<ul>
+<li>初始化 npm 项目</li>
+<li>安装 lerna</li>
+<li>lerna init 初始化项目</li>
+</ul>
+</li>
+<li>创建 package — 子项目<ul>
+<li>lerna create 创建 package</li>
+<li>lerna add 安装依赖</li>
+<li>lerna link 链接依赖</li>
+</ul>
+</li>
+<li>脚手架开发和测试<ul>
+<li>lerna exec 执行 shell 脚本</li>
+<li>lerna run 执行 npm 命令</li>
+<li>lerna clean 清空依赖</li>
+<li>lerna bootstrap 重装依赖</li>
+</ul>
+</li>
+<li>脚手架发布上线<ul>
+<li>lerna version  bump version</li>
+<li>lerna changed 查看上版本以来的所有变更</li>
+<li>lerna diff 查看diff</li>
+<li>lerna publish 项目发布</li>
+</ul>
+</li>
+</ol>
+<h3 id="2-lerna-源码分析"><a href="#2-lerna-源码分析" class="headerlink" title="2. lerna 源码分析"></a>2. lerna 源码分析</h3>
       
     </div>
     <div class="article-footer">
@@ -382,10 +571,6 @@
       <a href="/2022/03/27/hello-world/" title="Hello World"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;Newer</span></a>
     </li>
     
-    
-    <li class="next">
-      <a href="/2022/03/27/test-my-site/" title="test_my_site"><span>Older&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
-    </li>
     
     
   </ul>
